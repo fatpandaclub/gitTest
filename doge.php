@@ -11,7 +11,6 @@ Version: 1.0
 */
 
 function get_doge() {
-	/** These are the lyrics to Hello Dolly */
 	$doges = array(
 				'<img src="' . WP_PLUGIN_URL . '/gitTest/img/shiba01.jpg' . '"/>',
 				'<img src="' . WP_PLUGIN_URL . '/gitTest/img/shiba02.jpg' . '"/>',
@@ -22,22 +21,17 @@ function get_doge() {
 	shuffle($doges);
 	$ranDoge = $doges[0];
 
-	// And then randomly choose a line
 	return $ranDoge;
 }
 
-// This just echoes the chosen line, we'll position it later
 function doge() {
 	$chosenDoge = get_doge();
 	echo '<div class="doge">' . $chosenDoge . '</div>';
 }
 
-// Now we set that function up to execute when the admin_notices action is called
 add_action( 'admin_notices', 'doge' );
 
-// We need some CSS to position the paragraph
 function doge_css() {
-	// This makes sure that the positioning is also good for right-to-left languages
 	echo "
 	<style type='text/css'>
 	.doge img {
