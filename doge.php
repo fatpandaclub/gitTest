@@ -16,7 +16,6 @@ function get_doge() {
 				'<img src="' . WP_PLUGIN_URL . '/gitTest/img/shiba02.jpg' . '"/>',
 				'<img src="' . WP_PLUGIN_URL . '/gitTest/img/shiba03.jpg' . '"/>',
 				'<img src="' . WP_PLUGIN_URL . '/gitTest/img/shiba04.jpg' . '"/>',
-				'<img src="' . WP_PLUGIN_URL . '/gitTest/img/neko.jpg' . '"/>',
 			);
 
 	shuffle($doges);
